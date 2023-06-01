@@ -1,9 +1,9 @@
-const express = require('express')
+const express = require("express");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', async (req, res, next) => {
-  res.json({ message: 'template message' })
-})
+const ctrl = require("../../controllers/shops");
 
-module.exports = router
+router.get("/", ctrl.getShops);
+
+module.exports = router;
