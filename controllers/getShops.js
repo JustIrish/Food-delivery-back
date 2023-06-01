@@ -1,6 +1,6 @@
 const { Shop } = require("../models/shop");
 
-const { ctrlWrapper } = require("../helpers/ctrlWrapper");
+const { ctrlWrapper } = require("../helpers");
 
 const getShops = async (req, res) => {
   const data = await Shop.find();
