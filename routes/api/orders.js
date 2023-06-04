@@ -9,6 +9,6 @@ const { validateBody } = require("../../middlewares/validateBody");
 const { addOrderSchema } = require("../../models/order");
 
 router.post("/", validateBody(addOrderSchema), ctrl.addOrder);
-router.get("/history", ctrl.getOrders);
+router.post("/history", ctrl.getOrders);
 
 module.exports = router;
